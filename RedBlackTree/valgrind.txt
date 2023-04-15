@@ -1,28 +1,45 @@
-==1801137== Memcheck, a memory error detector
-==1801137== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1801137== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==1801137== Command: ./A5.exe
-==1801137== Parent PID: 1800956
-==1801137== 
-==1801137== Conditional jump or move depends on uninitialised value(s)
-==1801137==    at 0x109A92: TreeNode::~TreeNode() (in /home/mmann1/A5/A5.exe)
-==1801137==    by 0x1097DF: BinarySearchTree::~BinarySearchTree() (in /home/mmann1/A5/A5.exe)
-==1801137==    by 0x109CC3: RedBlackTree::~RedBlackTree() (in /home/mmann1/A5/A5.exe)
-==1801137==    by 0x10965A: main (in /home/mmann1/A5/A5.exe)
-==1801137== 
-==1801137== Conditional jump or move depends on uninitialised value(s)
-==1801137==    at 0x109AC1: TreeNode::~TreeNode() (in /home/mmann1/A5/A5.exe)
-==1801137==    by 0x1097DF: BinarySearchTree::~BinarySearchTree() (in /home/mmann1/A5/A5.exe)
-==1801137==    by 0x109CC3: RedBlackTree::~RedBlackTree() (in /home/mmann1/A5/A5.exe)
-==1801137==    by 0x10965A: main (in /home/mmann1/A5/A5.exe)
-==1801137== 
-==1801137== 
-==1801137== HEAP SUMMARY:
-==1801137==     in use at exit: 0 bytes in 0 blocks
-==1801137==   total heap usage: 12 allocs, 12 frees, 82,712 bytes allocated
-==1801137== 
-==1801137== All heap blocks were freed -- no leaks are possible
-==1801137== 
-==1801137== Use --track-origins=yes to see where uninitialised values come from
-==1801137== For lists of detected and suppressed errors, rerun with: -s
-==1801137== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==2669291== Memcheck, a memory error detector
+==2669291== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2669291== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2669291== Command: A5.exe
+==2669291== Parent PID: 2668877
+==2669291== 
+==2669291== Conditional jump or move depends on uninitialised value(s)
+==2669291==    at 0x109B24: RedBlackTree::insert(int) (in /home/mmann1/A5/A5.exe)
+==2669291==    by 0x10939B: main (in /home/mmann1/A5/A5.exe)
+==2669291== 
+==2669291== Invalid read of size 4
+==2669291==    at 0x10992C: TreeNode::getColor() (in /home/mmann1/A5/A5.exe)
+==2669291==    by 0x10AAD9: RedBlackTree::balanceColor(TreeNode*&, TreeNode*&) (in /home/mmann1/A5/A5.exe)
+==2669291==    by 0x109B91: RedBlackTree::insert(int) (in /home/mmann1/A5/A5.exe)
+==2669291==    by 0x10939B: main (in /home/mmann1/A5/A5.exe)
+==2669291==  Address 0x20 is not stack'd, malloc'd or (recently) free'd
+==2669291== 
+==2669291== 
+==2669291== Process terminating with default action of signal 11 (SIGSEGV)
+==2669291==  Access not within mapped region at address 0x20
+==2669291==    at 0x10992C: TreeNode::getColor() (in /home/mmann1/A5/A5.exe)
+==2669291==    by 0x10AAD9: RedBlackTree::balanceColor(TreeNode*&, TreeNode*&) (in /home/mmann1/A5/A5.exe)
+==2669291==    by 0x109B91: RedBlackTree::insert(int) (in /home/mmann1/A5/A5.exe)
+==2669291==    by 0x10939B: main (in /home/mmann1/A5/A5.exe)
+==2669291==  If you believe this happened as a result of a stack
+==2669291==  overflow in your program's main thread (unlikely but
+==2669291==  possible), you can try to increase the size of the
+==2669291==  main thread stack using the --main-stacksize= flag.
+==2669291==  The main thread stack size used in this run was 8388608.
+==2669291== 
+==2669291== HEAP SUMMARY:
+==2669291==     in use at exit: 82,432 bytes in 5 blocks
+==2669291==   total heap usage: 5 allocs, 0 frees, 82,432 bytes allocated
+==2669291== 
+==2669291== LEAK SUMMARY:
+==2669291==    definitely lost: 0 bytes in 0 blocks
+==2669291==    indirectly lost: 0 bytes in 0 blocks
+==2669291==      possibly lost: 0 bytes in 0 blocks
+==2669291==    still reachable: 82,432 bytes in 5 blocks
+==2669291==         suppressed: 0 bytes in 0 blocks
+==2669291== Rerun with --leak-check=full to see details of leaked memory
+==2669291== 
+==2669291== Use --track-origins=yes to see where uninitialised values come from
+==2669291== For lists of detected and suppressed errors, rerun with: -s
+==2669291== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

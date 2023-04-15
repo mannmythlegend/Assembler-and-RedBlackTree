@@ -14,7 +14,7 @@ int main(){
 	//Phase 1, 2, and 3
 	//opening txt file
 	std::ifstream inputfile;
-	inputfile.open("data.txt");
+	inputfile.open("data-1.txt");
 	int temp=0;
 	//getting numbers from the txt file by initializing RedBlackTree and making a while loop to read and insert
 	std::cout << "Getting numbers..." << std::endl;
