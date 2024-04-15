@@ -1,2 +1,5 @@
-for the aiAutograder project, it will work when you run the code with the script "python3 autograder.py" ... If you change all the html to cgi, it won't run with python3,
-but if you run the script "python autograder.py" it will run. Just a matter of different python systems used.
+Hello!
+
+The Assembler Project was created in a class I took Sophomore year called Foundations of Computing where we learned different gates (NOT, AND, OR, etc) and also assembly
+
+The Red-Black Tree Project was developed by me in a class called Advanced Data Structures. This class focus on building these data structures dynamically, and maintaining memory-safe code throughout with the use of valgrind.
